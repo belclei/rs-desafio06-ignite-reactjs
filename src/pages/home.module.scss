@@ -1,1 +1,45 @@
-// TODO
+.logo {
+  margin: 5rem 0 1rem;
+}
+.posts {
+  a {
+    display: block;
+    margin: 3rem 0;
+
+    & + a {
+      margin-top: 3rem;
+    }
+
+    strong {
+      font-size: 1.75rem;
+      color: var(--heading);
+    }
+    p {
+      font-size: 1.125rem;
+      margin: 0.5rem 0;
+    }
+    div {
+      color: var(--info);
+      margin-top: 1rem;
+      display: flex;
+      flex-direction: row;
+      span {
+        display: flex;
+        align-items: center;
+        margin-right: 1.5rem;
+
+        p {
+          margin-left: 0.5rem;
+          font-size: 0.875rem;
+        }
+      }
+    }
+  }
+}
+.nextPosts {
+  background: var(--background);
+  color: var(--highlight);
+
+  font-size: 1.125rem;
+  font-weight: 600;
+}
