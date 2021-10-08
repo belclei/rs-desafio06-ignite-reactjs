@@ -62,7 +62,7 @@ export default function Home({ postsPagination }: HomeProps): JSX.Element {
               { locale: ptBR }
             );
             return (
-              <Link href={`/posts/${post.uid}`} key={post.uid}>
+              <Link href={`/post/${post.uid}`} key={post.uid}>
                 <a>
                   <strong>{RichText.asText(post.data.title)}</strong>
                   <p>{RichText.asText(post.data.subtitle)}</p>
