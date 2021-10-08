@@ -5,7 +5,6 @@ import Prismic from '@prismicio/client';
 import { format } from 'date-fns';
 import { ptBR } from 'date-fns/locale';
 import { useEffect, useState } from 'react';
-import { RichText } from 'prismic-dom';
 import { FiUser, FiCalendar } from 'react-icons/fi';
 import { getPrismicClient } from '../services/prismic';
 
@@ -64,8 +63,8 @@ export default function Home({ postsPagination }: HomeProps): JSX.Element {
             return (
               <Link href={`/post/${post.uid}`} key={post.uid}>
                 <a>
-                  <strong>{RichText.asText(post.data.title)}</strong>
-                  <p>{RichText.asText(post.data.subtitle)}</p>
+                  <strong>{post.data.title}</strong>
+                  <p>{post.data.subtitle}</p>
                   <div>
                     <span>
                       <FiCalendar size="20px" color="#bbb" />
@@ -73,7 +72,7 @@ export default function Home({ postsPagination }: HomeProps): JSX.Element {
                     </span>
                     <span>
                       <FiUser size="20px" color="#bbb" />
-                      <p>{RichText.asText(post.data.author)}</p>
+                      <p>{post.data.author}</p>
                     </span>
                   </div>
                 </a>
